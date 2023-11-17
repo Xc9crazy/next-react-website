@@ -1,8 +1,12 @@
-export default function Hero() {
+function Decoration({ children }) {
+    return <div style={{ color: "red" }}>{children}</div>;
+}
+
+export default function Hero({title, subtitle}) {
     return (
-        <div>
-            <h1>CUBE</h1>
-            <p>ポップアップしていくサイト</p>
-        </div>
-    )
+    <Decoration>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+    </Decoration>
+    );
 }
