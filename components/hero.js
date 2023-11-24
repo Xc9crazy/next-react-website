@@ -1,12 +1,17 @@
+import styles from 'styles/hero.module.css'
+
 function Decoration({ children }) {
     return <div style={{ color: "red" }}>{children}</div>;
 }
 
-export default function Hero({title, subtitle}) {
+export default function Hero({title, subtitle,imageOn=false}) {
     return (
-    <Decoration>
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-    </Decoration>
+        <Decoration>
+            <Decoration className={styles.text}>
+            <h1 className={styles.title}>{title}</h1>
+            <p classNames={styles.subtitle}>{subtitle}</p>
+            </Decoration>
+            {imageOn && <figure>[画像]</figure>}
+        </Decoration>
     );
 }
