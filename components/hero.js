@@ -7,7 +7,7 @@ function Decoration({ children }) {
 export default function Hero({title, subtitle,imageOn=false}) {
     return (
         <Decoration>
-            <Decoration className={styles.text}>
+            <Decoration className={styles.flexContainer}>
             <h1 className={styles.title}>{title}</h1>
             <p classNames={styles.subtitle}>{subtitle}</p>
             </Decoration>

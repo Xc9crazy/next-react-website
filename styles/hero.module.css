@@ -1,0 +1,21 @@
+.flexContainer{
+    composes: sideBySideCenteer from 'styles/utils.module.css'
+}
+
+
+
+
+.text {
+    padding-top: clac(var(--display)*0.5);
+    padding-bottom: clac(var(--display)*0.7);
+}
+
+.title {
+    font-size: var(--display);
+    font-weight: 900;
+    letter-spacing: 0.15em;
+}
+
+.subtitle {
+    font-size: var(--small-heading2)
+}
