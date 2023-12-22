@@ -7,11 +7,11 @@ export default function Header() {
     return (
         <header>
         <Container large>
-            <div clasname={styles.flexContainer}>
+            <div className={styles.flexContainer}>
             <Logo boxOn />
             <Nav />
             </div>
         </Container>
         </header>
-    );
+    )
 }
