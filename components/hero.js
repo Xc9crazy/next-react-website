@@ -1,4 +1,6 @@
 import styles from 'styles/hero.module.css'
+import Image from 'next/image'
+import cube from 'images/cube.jpg'
 
 function Decoration({ children }) {
     return <div>{children}</div>;
@@ -6,12 +8,23 @@ function Decoration({ children }) {
 
 export default function Hero({title, subtitle,imageOn=false}) {
     return (
-        <Decoration>
-            <Decoration className={styles.flexContainer}>
+        <div className={styles.flexContainer}>
+            <div className={styles.text}>
             <h1 className={styles.title}>{title}</h1>
             <p classNames={styles.subtitle}>{subtitle}</p>
-            </Decoration>
-            {imageOn && <figure>cube.jpg</figure>}
-        </Decoration>
+        </div>
+        {imageOn && (
+            <figure className={styles.image}>
+                <Image
+                    src={cube}
+                    alt=""
+                    layout="responsive"
+                    sizes="(min-width: 1152px) 576px, (min-width: 768px)50vw, 100vw"
+                    priority
+                    placeholder="blur"
+                />
+            </figure>
+        )}
+        </div>
     );
 }

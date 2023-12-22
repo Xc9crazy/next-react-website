@@ -7,7 +7,6 @@ export default function Blog() {
         <Hero
         title="Blog"
         subtitle="Recent Posts"
-        imageOn
             />
         </Container>
     )
